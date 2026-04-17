@@ -10,7 +10,7 @@ const searchRoutes = require('./routes/searchRoutes');
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(helmet());
@@ -19,6 +19,7 @@ app.use(express.json());
 
 // Basic Route for testing
 app.get('/', (req, res) => {
+    console.log('Root route accessed');
     res.json({ message: 'Welcome to the Quran API' });
 });
 
